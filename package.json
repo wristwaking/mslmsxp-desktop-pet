@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "productName": "像素宝宝桌面宠物",
+  "description": "边缘骇客直播互动助手像素宝宝桌面宠物",
+  "author": "上海预醒网络科技有限公司",
+   "name": "EdgeHaker-Mini-Pixel",
+  "scripts": {
+    "start": "chcp 65001 && electron .",
+    "pack": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "EdgeHaker-Mini-Pixel",
+    "productName": "像素宝宝桌面宠物",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "像素宝宝桌面宠物",
+      "license": "LICENSE.txt",
+      "uninstallDisplayName": "像素宝宝桌面宠物"
+    }
+  },
+  "nsis": {
+    "oneClick": false,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "moment": "^2.29.4",
+    "node-notifier": "^10.0.1",
+    "node-schedule": "^2.1.1",
+    "uuid": "^9.0.1",
+    "validator": "^13.11.0"
+  }
+}

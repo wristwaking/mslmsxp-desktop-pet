@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="mini.css">
+</head>
+
+<body>
+    <div class="bot-box" id="app">
+        <audio ref="music" src="http://music.163.com/song/media/outer/url?id=1959190717.mp3"></audio>
+        <div class="bot-box-logo">
+            <div class="bot-box-logo-img" @click="OpenMenu"></div>
+            <div class="bot-box-btn" v-if="menustate" @click="EnterMain">问问题</div>
+            <div class="bot-box-drag" v-if="menustate">拖置吧</div>
+            <div class="bot-box-music" v-if="menustate" @click="ListenMusic">听音乐</div>
+            <div class="bot-box-taobao" v-if="menustate" @click="OpenTaobao">淘宝店</div>
+        </div>
+        <div class="message-content" v-if="state" @click="CloseContent">
+            <span class="triangle"></span>
+            <div>
+                <p>{{time ? time:"像素宝宝的闹钟坏了！"}}</p>
+                <p>温馨提醒：{{content}}</p>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="mini.css">
+    <script src="vue.min.js"></script>
+    <script src="render.js"></script>
+</body>
